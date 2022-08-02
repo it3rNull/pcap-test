@@ -71,7 +71,6 @@ int main(int argc, char *argv[])
                 ether_info(packet);
                 ip_info(&ipinfo);
                 tcp_info(packet + 14 + 4 * (ipinfo.ip_hl), &ipinfo);
-                printf("%u bytes captured\n\n", header->caplen);
             }
         }
     }
