@@ -170,7 +170,6 @@ void tcp_info(const u_char *packet, ip_hdr *ipinfo)
     t_hdr = (tcp_hdr *)packet;
     const u_char *payload = packet + 4 * (t_hdr->tcp_offset);
     u_int16_t length = ntohs(ipinfo->ip_len);
-    printf("hl : %d , tcp : %d\n", ipinfo->ip_hl, t_hdr->tcp_offset);
     length -= 4 * (ipinfo->ip_hl + t_hdr->tcp_offset);
     printf("===============TCP header===============\n");
     printf("TCP source port : ");
